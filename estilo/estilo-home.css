@@ -1,0 +1,142 @@
+/* rezetando o css da pagina*/
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* declarando variaveis no css*/
+:root {
+    --vermelho: #e50914;
+    --preto: #141414;
+}
+
+body {
+    background: var(--preto);
+    font-family: 'Arial', Times, serif;
+}
+
+/* menu */
+header .container-fluid {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.logo {
+    color: var(--vermelho);
+    font-family: 'Arial Black', Times;
+    font-size: 40px;
+    margin-left: 20px;
+}
+
+header nav a {
+    text-decoration: none;
+    color: #AAA;
+    margin-right: 15px;
+}
+
+header nav a:hover {
+    color: white;
+}
+
+/* filme principal */
+.filme-principal {
+    color: white;
+    background:linear-gradient(rgba(0,0,0,.5), rgba(0,0,0,.5) 100%), url('/img/capa-house.jpg');
+    height: 400px;
+    background-size:cover;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+.filme-principal .descricao {
+    margin-top: 10px;
+    margin-bottom: 40px;
+}
+
+.filme-principal .titulo {
+    font-size: 35px;
+    font-family:'Trebuchet MS', Arial, sans-serif;
+    margin-top: 15%;
+    
+}
+
+.botoes {
+    margin-left: 30px;
+}
+
+.filme-principal .btn-filme-principal {
+    background-color: rgba(0,0,0,.5);
+    border: none;
+    color: white;
+    padding: 15px 20px;
+    margin-right: 15px;
+    font-size: 13px;
+    font-weight: bold;
+    transition: .3s ease all;
+}
+
+.btn-filme-principal:hover {
+    cursor: pointer;
+    background-color: white;
+    color: #141414;
+}
+
+.btn-filme-principal i {
+    margin-right: 5px;
+}
+
+.filme-principal .container {
+    width: 70%;
+}
+
+.container {
+    margin-left: 30px;
+}
+
+/* carousel */
+.box-filme {
+    height: 100%;
+    width: 100%;
+    display: block;
+}
+
+.item {
+    margin: 10px 15px;
+}
+
+.subtitulo-carousel {
+    margin: 40px 0 10px 15px;
+    color: white;
+    font-size: 35px;
+    font-family:'Trebuchet MS', Arial, sans-serif;
+}
+
+/* responsividade */
+@media screen and (max-width:700px) {
+    header .container-fluid {
+        display: flex;
+        flex-direction: column;
+    }
+}
+
+@media screen and (max-width:300px) {
+    .botoes, .btn-filme-principal {
+        margin-top: 15px;
+    }
+
+    header .container-fluid {
+        display: flex;
+        flex-direction: column;
+    }
+}
+
+@media screen and (min-width:1000px) {
+    .descricao {
+        width: 50%;
+    }
+}

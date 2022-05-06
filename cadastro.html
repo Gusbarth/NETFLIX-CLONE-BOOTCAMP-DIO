@@ -4,8 +4,8 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Login Netflix</title>
-    <link rel="stylesheet" href="estilo/index-estilo.css">
+    <title>Cadastro Netflix</title>
+    <link rel="stylesheet" href="estilo/cadastro-estilo.css">
 </head>
 <body>
     <main>
@@ -19,19 +19,20 @@
         <div class="container-fluid-cadastro">
             <div class="container-cadastro">
                 <div class="row">
-                    <h2 class="titulo-entrar">ENTRAR</h2>
+                    <h2 class="titulo-entrar">CADASTRAR</h2>
                 </div>
                 <div class="formulario">
                     <form action="#" name="form-cadastro">
+                        <label for="user">Email</label><br>
+                        <input type="text" id="email" name="email" placeholder="email" required><br>
                         <label for="user">Usuário</label><br>
-                        <input type="text" id="user" name="user" placeholder="Usuário"><br>
+                        <input type="text" id="user" name="user" placeholder="Usuário" required><br>
                         <label for="senha">Senha</label><br>
-                        <input type="text" id="senha" name="senha" placeholder="Senha"><br><br>
-                        <a onclick="return validateForm()" id="btn-entrar" href="home.html">Entrar</a><br><br><br>
-                        <input type="radio" id="dados" value="dados">
-                        <label id="dados" for="dados">Lembrar de mim</label>
-                        <a class="help" href="#">Precisa de ajuda?</a><br><br>
-                        <p class="link-cadastro-pergunta">Novo(a) por aqui?<a class="link-cadastro-link" href="cadastro.html"><strong> Cadastre-aqui</strong></a></p>
+                        <input type="text" id="senha" name="senha" placeholder="Senha" required><br>
+                        <label for="senha">Favor repetir sua senha</label><br>
+                        <input type="text" id="senha" name="senha-repetir" placeholder="Senha" required><br><br>
+                        <a onclick="return validateFormCadastro()" id="btn-cadastrar" href="index.html">Cadastrar</a><br><br>
+                        
                     </form>
                 </div>
             </div>
